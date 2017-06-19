@@ -131,7 +131,7 @@ int countPartialValue()
 }
 
 
-/// If there are unnecessary white spaces inside original input s1,
+/// If there are unnecessary white spaces at the beginning and finishing of original input s1,
 /// This function will print s1 without those unnecessary white spaces
 void printWithoutWhiteSpace()
 {
