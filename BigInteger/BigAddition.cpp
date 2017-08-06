@@ -56,7 +56,7 @@ void bigAddition()
         LenA = LenB;
         LenB = tempLen;
 
-        delete temp;
+        free(temp);
     }
 
     /// We have to shift the shorter number to the right
