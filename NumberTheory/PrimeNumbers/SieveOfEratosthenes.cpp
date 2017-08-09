@@ -18,21 +18,29 @@ int main()
 
     /// Setting 0 and 1 as non-prime explicitly
     prime[0] = prime[1] = false;
+    /// One and only even prime number
+    prime[2] = true;
+
+    /// Marking all even numbers as false
+    for (i = 4; i < MAXSIZE; i += 2) {
+        prime[i] = false;
+    }
 
     /// Determining the limit of sieve operation
     limit = sqrt(MAXSIZE);
 
     /// If any value is prime (i.e. true),
     /// setting the multiples of that value as non-prime(i.e) false
-    for (i = 2; i <= limit; i++) {
+    /// only for odd numbers
+    for (i = 3; i <= limit; i += 2) {
         if (prime[i] == true) {
-            sum = 2 * i;
+            /// sum = 2 * i;
+            sum = i * i; /// Optimized
 
-            /// Avoiding Multiplication to find the multiples
-            /// Using Addition to reduce the runtime
             while (sum <= MAXSIZE - 1) {
                 prime[sum] = false;
-                sum += i;
+                /// sum += i;
+                sum += 2 * i; /// Optimized
             }
         }
     }
