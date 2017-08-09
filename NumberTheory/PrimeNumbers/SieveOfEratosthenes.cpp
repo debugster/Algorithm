@@ -30,7 +30,7 @@ int main()
     limit = sqrt(MAXSIZE);
 
     /// If any value is prime (i.e. true),
-    /// setting the multiples of that value as non-prime(i.e) false
+    /// setting the multiples of that value as non-prime (i.e. false)
     /// only for odd numbers
     for (i = 3; i <= limit; i += 2) {
         if (prime[i] == true) {
