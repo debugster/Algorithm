@@ -29,8 +29,10 @@ ULL bigMod(ULL B, ULL P, ULL M)
         return 1 % M;
     }
     else if (P % 2 == 0) {
-        ULL result = bigMod(B, P / 2, M);
-        return ((result % M) * (result % M)) % M;
+        /// ULL result = bigMod(B, P / 2, M);
+        /// return ((result % M) * (result % M)) % M;
+        ULL result = bigMod(B, P / 2, M) % M;
+        return (result * result) % M;
     }
     else {
         return ((B % M) * (bigMod(B, P - 1, M) % M)) % M;
