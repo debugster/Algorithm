@@ -25,16 +25,11 @@ int main()
 
 ULL bigMod(ULL B, ULL P, ULL M)
 {
-    ULL result;
-
-    if (M == 1) {
-        return 0;
-    }
-    else if (P == 0) {
-        return 1;
+    if (P == 0) {
+        return 1 % M;
     }
     else if (P % 2 == 0) {
-        result = bigMod(B, P / 2, M);
+        ULL result = bigMod(B, P / 2, M);
         return ((result % M) * (result % M)) % M;
     }
     else {
