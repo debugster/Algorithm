@@ -6,7 +6,7 @@ using namespace std;
 
 typedef unsigned long long ULL;
 
-ULL bigMod(ULL B, ULL P, ULL M);
+ULL bigMod(ULL B, ULL P, ULL M); /// returns B^P % M
 
 int main()
 {
