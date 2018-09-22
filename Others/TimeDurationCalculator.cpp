@@ -104,7 +104,7 @@ int main()
 {
     //freopen("in.txt", "r", stdin);
     //freopen("out.txt", "w", stdout);
-
+    
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
@@ -122,6 +122,10 @@ int main()
 
     cin >> test;
     for (t = 1; t <= test; t++) {
+        // inpute format sample:
+        // 7 Jun 2018 at 04:45:32 PM
+        // 8 Jun 2018 at 07:20:12 PM
+        
         cin >> sDate >> _sMon >> sYear >> temp >> sHH >> ch >> sMM >> ch >> sSS >> _sAP;
         cin >> fDate >> _fMon >> fYear >> temp >> fHH >> ch >> fMM >> ch >> fSS >> _fAP;
 
